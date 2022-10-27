@@ -1,6 +1,6 @@
 package org.example.arrays;
 
-public class Arrays_09_ReverseCopy {
+public class Arrays_09_Reverse {
 
     public static void main(String[] args) {
         int A[] = {8, 6, 10, 9, 2};

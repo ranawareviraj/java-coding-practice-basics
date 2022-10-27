@@ -14,8 +14,30 @@ public class Arrays_05_SecondMax {
         }
         System.out.println("Max is: " + max1);
         System.out.println("Second Max is: " + max2);
+
+
+        }
+
+
+    //Solution2
+    int print2largest(int arr[], int n) {
+
+        int max1 = -1;
+        int max2 = -1;
+
+        for(int i=0; i< n; i++){
+            if(max1< arr[i]){
+                max2 = max1;
+                max1 = arr[i];
+            }else if ((arr[i] < max1) && (arr[i]>max2))    {
+                max2 = arr[i];
+
+            }
+        }
+        return max2;
     }
-}
+    }
+
 
 /*
 If we say max1,max2 = arr[0]
