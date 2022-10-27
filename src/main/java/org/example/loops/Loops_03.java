@@ -1,33 +1,27 @@
 package org.example.loops;
 
-import com.sun.source.tree.IfTree;
-
-import javax.swing.text.StyleContext;
 import java.util.Scanner;
 
-public class Loops_03
-{
-    public static void main( String[] args )
-    {
-        int choice = -1;
-        Scanner scanner = new Scanner(System.in);
-        choice = getChoice(choice, scanner);
+public class Loops_03 {
+    static int choice = -1;
 
-        while (choice == 1){
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        getChoice(scanner);
+
+        while (choice == 1) {
             System.out.println("Enter Marks 0-100");
             int marks = scanner.nextInt();
-            if(marks>= 90) System.out.println("This is Good");
-            if(marks>= 60 && marks<=89) System.out.println("This also is Good");
-            if(marks>= 0 && marks<=59) System.out.println("This also is Good");
-            choice = getChoice(choice, scanner);
+            if (marks >= 90) System.out.println("This is Good");
+            if (marks >= 60 && marks <= 89) System.out.println("This also is Good");
+            if (marks >= 0 && marks <= 59) System.out.println("This also is Good");
+            getChoice(scanner);
         }
-
     }
 
-    private static int getChoice(int choice, Scanner scanner) {
+    private static void getChoice(Scanner scanner) {
         System.out.println("Enter a 1 to find if marks are good, 0 to exit");
         choice = scanner.nextInt();
-        return choice;
     }
 }
 
